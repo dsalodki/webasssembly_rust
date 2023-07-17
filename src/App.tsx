@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import init, { add } from "wasm-lib";
+import init, { add, greet } from "wasm-lib";
 
 function App() {
 const [ans, setAns] = useState(0);
@@ -26,6 +26,7 @@ setAns(add(1,1));
         >
           Learn React
         </a>
+        <button onClick={greet}>Greet</button>
       </header>
     </div>
   );
